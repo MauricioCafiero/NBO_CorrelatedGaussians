@@ -1,0 +1,7 @@
+# Python byte-code cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Output files generated at runtime
+necg.out
