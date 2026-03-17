@@ -68,7 +68,7 @@ def read_input(filename: str = "oldquit.dat") -> None:
 
     def _next_float() -> float:
         nonlocal pos
-        val = float(tokens[pos])
+        val = float(tokens[pos].lower().replace('d', 'e'))
         pos += 1
         return val
 
