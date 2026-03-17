@@ -6,6 +6,7 @@ module-level variables so that it can be imported and mutated by every
 sub-module, mirroring the Fortran USE association mechanism.
 """
 
+import math
 import numpy as np
 
 # ---------------------------------------------------------------------------
@@ -67,21 +68,7 @@ jjj: int = 0
 # ---------------------------------------------------------------------------
 # Numerical constants
 # ---------------------------------------------------------------------------
-PI: float = 3.1415926535898
-
-ZERO: float = 0.00
-HALF: float = 0.50
-QUARTER: float = 0.25
-EIGHTH: float = 0.125
-ONE: float = 1.00
-TWO: float = 2.00
-THREE: float = 3.00
-FOUR: float = 4.00
-FIVE: float = 5.00
-SIX: float = 6.00
-SEVEN: float = 7.00
-EIGHT: float = 8.00
-SIXTEEN: float = 16.00
+PI: float = math.pi   # full machine precision
 
 # ---------------------------------------------------------------------------
 # Pade-approximation constants for the Boys function F0

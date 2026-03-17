@@ -101,5 +101,6 @@ def df0(z: float) -> float:
         danum = 5.0 * sh.C1 * z ** 4 + 4.0 * sh.C2 * z ** 3 + 3.0 * sh.C3 * z ** 2 + 2.0 * sh.C4 * z + sh.C5
         daden = 6.0 * sh.C6 * z ** 5 + 5.0 * sh.C7 * z ** 4 + 4.0 * sh.C8 * z ** 3 + 3.0 * sh.C9 * z ** 2 + 2.0 * sh.C10 * z + sh.C11
         return (1.0 / (2.0 * f0_val)) * ((aden * danum - anum * daden) / aden ** 2)
-    # Asymptotic branch
-    return -0.5 * (1.0 / math.sqrt(sh.PI / (4.0 * z))) * sh.PI / (4.0 * z ** 2)
+    # Asymptotic branch: d/dz sqrt(pi/(4z)) = -sqrt(pi) / (4 * z^(3/2)) / 2 ...
+    # Simplifies to: -pi / (8 * z^2) / f0(z)
+    return -math.sqrt(sh.PI / (4.0 * z)) / (2.0 * z)

@@ -109,7 +109,7 @@ def main(input_file: str = "oldquit.dat") -> None:
     # ------------------------------------------------------------------
     read_input(input_file)
 
-    print(f"M, NN, NE, NST = {sh.M}, {sh.ne}, {sh.nst}")
+    print(f"M, NE, NST = {sh.M}, {sh.ne}, {sh.nst}")
     print(f"Electric Field = {sh.efs}")
     print("OUTPUT FILENAME = necg.out")
 
