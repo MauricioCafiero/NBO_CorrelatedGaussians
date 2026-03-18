@@ -11,6 +11,8 @@ of correlated Gaussians with shifted centres:
 
 ```math
 Ψ = Σ_k C_k · φ_k
+```
+```math
 φ_k = exp( -r^T A_k r ) · exp( -s_k^T r )
 ```
 
