@@ -9,13 +9,13 @@ systems using explicitly-correlated Gaussian (ECG) basis functions in the
 non-Born-Oppenheimer framework.  The wave function is a linear combination
 of correlated Gaussians with shifted centres:
 
-```
+```math
 Ψ = Σ_k C_k · φ_k
 φ_k = exp( -r^T A_k r ) · exp( -s_k^T r )
 ```
 
-where `A_k = L_k L_k^T` is a positive-semidefinite matrix formed from a
-lower-triangular Cholesky factor `L_k`.
+where $A_k = L_k L_k^T$ is a positive-semidefinite matrix formed from a
+lower-triangular Cholesky factor $L_k$.
 
 ## Requirements
 
