@@ -45,11 +45,14 @@ high-accuracy calculations on small systems such as He, $H_2$, and $Li_2$.
 
 ```
 NBO_CorrelatedGaussians/
-├── source/          # Original Fortran 90 / Fortran 77 code (MPI)
-├── python/          # Python refactoring (single-process, NumPy/SciPy)
-├── oldquit.dat      # Default H2 input file (16-term basis)
-├── h2_input         # Alternative H2 example input
-└── LICENSE          # MIT License
+├── source/                   # Original Fortran 90 / Fortran 77 code (MPI)
+├── python/                   # Python refactoring (single-process, NumPy/SciPy)
+├── input_file_generation/    # Tools for generating LiH input files
+│   ├── generate_lih_input.py # Generator script (any basis set size)
+│   └── README.md             # Usage instructions
+├── oldquit.dat               # Reference LiH input file (12-term basis)
+├── h2_input                  # Alternative H2 example input
+└── LICENSE                   # MIT License
 ```
 
 ---
@@ -198,8 +201,10 @@ system:
 | `scvv(nst)` | Symmetry-term weights |
 | `sml`, `sms` | Symmetry matrices for Gaussians and shifts |
 
-Example input files for $H_2$ are provided as `oldquit.dat` (16-term basis)
-and `h2_input`.
+Example input files: `oldquit.dat` is the reference LiH input (12-term basis,
+5 non-BO particles); `h2_input` is an alternative H₂ example.  The
+`input_file_generation/` directory contains a script to generate LiH input
+files for any basis set size (see [`input_file_generation/README.md`](input_file_generation/README.md)).
 
 ### Output (`necg.out`)
 
